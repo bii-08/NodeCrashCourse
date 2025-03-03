@@ -1,0 +1,30 @@
+{
+  "name": "nodecrashcourse",
+  "version": "1.0.0",
+  "main": "files.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bii-08/NodeCrashCourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bii-08/NodeCrashCourse/issues"
+  },
+  "homepage": "https://github.com/bii-08/NodeCrashCourse#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.11.0",
+    "morgan": "^1.10.0"
+  }
+}

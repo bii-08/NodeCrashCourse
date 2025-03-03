@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash');
 
 // Create a server
 const server = http.createServer((request, response) => {
@@ -8,17 +9,19 @@ const server = http.createServer((request, response) => {
   // request object: this object contains information about the request that was made to the server such as the URL, the method used to make the request like GET or POST, etc.
    // response object: this object contains methods that allow us to send a response back to the browser 
 
-//    console.log('request made');
-   console.log(request.url, request.method);
+   // lodash
+   const num = _.random(0, 20);
+   console.log(num);
+
+   const greet = _.once(() => { // This will only run once
+      console.log('Hello');
+   })
+
+   greet();
+   greet();
 
    // set header content type
    response.setHeader('Content-Type', 'text/html'); // This will set the content type to plain text
-
-   // send a response
-   // response.write('<head><link rel="stylesheet" href="#"></head>'); 
-   // response.write('<p>Hello, Tintam!</p>'); // This will send a response to the browser
-   // response.write('<p>How are you today?</p>');
-
 
    // Routing
    let path = './views/';
@@ -79,3 +82,9 @@ server.listen(3000, 'localhost', () => {
 // When you make a request to a server, you need to specify the port number you want to connect to.
 
 // localhost:3000 is the URL you will use to access the server. The server is listening for requests on port 3000.
+
+
+// Dependencies:
+// npm install: it will install all the dependencies that are listed in the package.json file.
+
+// Express: It is a web framework that helps us to easily manage our routing requests and responses in a much more organized way.
